@@ -5,3 +5,5 @@ This contains beginner to intermediate level practice of python syntax, methods 
 
 #First changes
 This is the first change in the file.  
+
+This is the second change. 
