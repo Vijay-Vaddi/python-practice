@@ -28,7 +28,7 @@ result = cube(4)
 
 ##if statments and comparison
 #comparison of values
-
+'''
 def max_num(num1, num2, num3):
     if num1>=num2 and num1>=num3:
         return num1
@@ -55,9 +55,17 @@ def translate(phrase):
     return translation
 
 print(translate(input("Enter a phrase")))
-
+'''
 ''' 
 Oh this is also a comment structure. its like /* */
 kjdsfld
 '''
 # COMMENTS from video
+
+# *args and **kwargs
+
+def super_func(*args, **kwargs):
+    print(*args)
+    print(kwargs.values())
+
+print(super_func(1,2,3,4,5, num1=5, num2=10))
