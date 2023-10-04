@@ -64,8 +64,11 @@ kjdsfld
 
 # *args and **kwargs
 
-def super_func(*args, **kwargs):
+def super_func(name, *args, hi='hey', **kwargs):
     print(*args)
     print(kwargs.values())
 
-print(super_func(1,2,3,4,5, num1=5, num2=10))
+print(super_func('Vijay', 1,2,3,4,5, num1=5, num2=10))
+
+#rule for sending values to functions
+#params, *args, default parameters, **kwargs
