@@ -6,11 +6,23 @@ class User:
 
 
 class Wizard(User):
-    pass
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+    
+    def attack(self):
+        print(f'attacking with awesome fire blaze {self.power}')
 
 
 class Archers(User):
-    pass
+    def __init__(self, name, num_arrows):
+        self.name = name
+        self.num_arrows = num_arrows
 
-wizard1 = Wizard()
-print(wizard1.sign_in())
+    def attack(self):
+        print(f'Attacking with {self.num_arrows} killer arrows !!')
+
+wizard1 = Wizard('Merllin', 50)
+archer1 = Archers('legolas', 1)
+wizard1.attack()
+archer1.sign_in()
