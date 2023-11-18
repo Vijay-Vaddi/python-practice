@@ -1,5 +1,5 @@
 #generators are much faster.
-
+# many python libraries use generators for better performance
 from time import time
 
 def performance(fn):
