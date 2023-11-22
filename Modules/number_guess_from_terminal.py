@@ -1,12 +1,16 @@
-import random
+from random import randint
+from random import randrange
+import sys
 
-rand = random.randrange(1,10)
+# answer = randint(int(sys.argv[1]), int(sys.argv[2]))
+answer = randrange(int(sys.argv[1]), int(sys.argv[2]))
+# randrange did not work from terminal
 
 while True:
     try:
         guess = int(input(f'Please enter a number from 1 to 10 '))
         if  0< guess <11:
-            if guess == rand:
+            if guess == answer:
                 print(f'Hurrah... You win but its nothing!!!')
                 break
             else:
