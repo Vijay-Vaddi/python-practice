@@ -6,6 +6,7 @@ import unittest
 class TestMain(unittest.TestCase):
     def setUp(self): 
         print(f'about to test a method')
+        # all methods on TestMain used to test should start with word 'test'
         #default method on unittest which runs before each test function is called. 
         #can be used to set up before calling each function for eg, some default variables 
     def test_do_stuff(self):
