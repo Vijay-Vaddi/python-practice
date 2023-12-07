@@ -24,6 +24,7 @@ with open('./PDFs_with_python/dummy.pdf', 'rb') as file:
     #tilted pdf is a new empty pdf  object, you perform write function by passing new_file/tilted to it.          
 
     
+    
 
 
 
