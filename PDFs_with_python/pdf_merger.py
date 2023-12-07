@@ -12,7 +12,8 @@ def pdf_merger(pdf_list):
     for pdf in pdf_list:
         
         merger.append(pdf)
-    merger.write('merged_file.pdf')
+    with open('merged_file.pdf', 'wb') as file2:
+        merger.write(file2)
 
   
 pdf_merger(inputs)
