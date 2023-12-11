@@ -10,6 +10,9 @@ def request_api_data(query_data):
         raise RuntimeError(f'Error Fetching: {res.status_code}, check API please')
     return res
 
+# to learn more about the data received in above 'res'
+
+
 
 def pawned_api_check(password):
     
@@ -19,7 +22,7 @@ def pawned_api_check(password):
     # turn to upper case to match with API
     sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
     print(sha1password)
-
+    
     print(request_api_data(sha1password[:5]))
 
 pawned_api_check('123')
