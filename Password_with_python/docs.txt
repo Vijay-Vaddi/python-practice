@@ -2,6 +2,8 @@ import requests
 import hashlib 
 import sys
 
+#send first 5 chars of hashed password123 as request to api to compare with database
+
 def request_api_data(query_data):
     url = 'https://api.pwnedpasswords.com/range/' + query_data
     res = requests.get(url)
@@ -10,19 +12,36 @@ def request_api_data(query_data):
     return res
 
 def password_leaks_count(hashes, hash_to_check):
+    pass
+    # since response text is in hashes: count format
+    # split it, into a tuple, 
     hashes = (line.split(':') for line in hashes.text.splitlines())
+    #hashes.text gives generator object, hence splithead
+    # print(hashes)
     for h, count in hashes:
+    # print(h) this will also give both h, count in list format why??
         if h == hash_to_check:
             return count
     return 0
 
-
 def pawned_api_check(password):
+    
+    #encode password into utf-8 string, 
+    # use sha1 to hash it, gives sha1 object
+    #digest to return hex value. 
+    # turn to upper case to match with API
     sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
+    # print(sha1password)
+    
     first_5_chars, tail = sha1password[:5], sha1password[5:]
+    
     response = request_api_data(first_5_chars)
+    print(response)
+    #all the hashes that match the beginning of our 
+
     return password_leaks_count(response, tail)
 
+# to learn more about the data received in above 'res'
 
 def main(passwords):
     for password in passwords:
@@ -35,3 +54,11 @@ def main(passwords):
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))
+
+# def read_res(response):
+#     print(response.text) 
+    #api response can be ideally be read as text
+    # gives all the hashes that match with the first 5 characters of our hashed pass
+    #and how many times they were hacked. 
+
+# print(pawned_api_check('hello12334'))
