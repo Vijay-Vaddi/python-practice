@@ -1,0 +1,34 @@
+AI as a large section, 
+machine learning is to automate that ai with data
+Deep learning is specific section of that ML. 
+Data science is a bit of all which involves analyzing/getting something out of data. 
+
+models are nothing but functions that perform certain actions on data to get a particular output. 
+
+
+Steps of machine learning
+Import data
+clean the data
+split the data. Training/test Set 
+creat a model using a known algorithm. 
+check the output
+Improve the model, (with diff algo, diff/change data set etc)
+
+(big companies rather give out models than data)
+
+Tools for ML
+Numpy : must 
+lists and arrays, multi Dimension arrays which are used very often in ML
+pandas : used for data analysis, idea of data frame, which allows func to manipulate data in tabular, rows and colums.
+read csv, extract into data frames, then can do transformations and aggregations. 
+
+scikit learn : used to create the model. import llibs and got diff algorithms
+
+matplotlib : charting library. visualize data. 
+
+jupyter notebooks. used for ML and datascience. 
+allows to step through code, output and keep track of thigns, see and visualize.
+allows to communicate better. standard in ML and DS. 
+
+kaggle: 
+
