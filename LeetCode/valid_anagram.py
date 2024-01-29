@@ -26,4 +26,4 @@ def check_anagrams(dic_s, dic_t):
     print(dic_t.items(), '\n', dic_s.items())
     return dic_s.items() == dic_t.items() #dic_t.keys() == dic_s.keys() and dic_s.values() == dic_t.values()
 
-print(check_anagrams(dic_s, dic_t))
+print(check_anagrams(dic_s, dic_t)) 

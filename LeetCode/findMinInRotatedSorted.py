@@ -1,6 +1,6 @@
 #leetcode 153 find the minimum in rotated sorted array
 
-nums = [4,5,6,7,0,1,2]
+nums = [7,1,2,3,4,5,6]
 
 res = nums[0]
 l, r = 0, len(nums)-1
