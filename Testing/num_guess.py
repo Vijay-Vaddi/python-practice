@@ -21,6 +21,7 @@ def guess_num(guess, answer):
     except TypeError as err:
         print('wrong type')
         return 'TypeError'
+
 if  __name__ == '__main__':
     answer = randint(int(sys.argv[1]), int(sys.argv[2]))
     while True:

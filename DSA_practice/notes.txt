@@ -1,0 +1,21 @@
+Big O and scalability, graph explanation:
+---------
+Definition:
+When we grow bigger in input quantity (elements), how much does the algorithm slow down. 
+
+Elements vs Operations. 
+If Elements increases, how many more operations do we have to do? 
+This is called algorithmic efficiency.
+--------
+O(n) : Linear time. as elements increase operations time increases. 
+Big o depends on the numbers of inputs(n) linearaly. 
+
+Big O doesnt measure time, but how quicky the run time grows. change in run time. 
+----------
+
+O(1) : Constant time, flat line. 
+Inputs can be any type of data. 
+
+Irrespective of inputs, the number of operations is same.  
+Not necessarily 1 operation but constant time.  
+
