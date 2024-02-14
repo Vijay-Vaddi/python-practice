@@ -19,3 +19,71 @@ Inputs can be any type of data.
 Irrespective of inputs, the number of operations is same.  
 Not necessarily 1 operation but constant time.  
 
+#########################################################
+#########################################################
+
+Rules of calculating Big O.
+1. Always consider the worst case scenario. 
+2. Remove the constants
+---- O(1 + n/2 + 1000) --> O(n)
+since constants dont matter once the data is large enough. 
+O(n+n) O(2n) (since this still linear) --> O(n) 
+Only if the n and n are same. for example function with two loops interating over n. 
+
+
+3. Different terms for inputs (m,n) 
+if m and n are Different for loops, 
+O(m+n)
+
+# for nested loops 
+# O(m*n) --> n^2 (n sqaured) if m==n. 
+# O(n^2) --> This is called quadratic time. 
+
+Common interview questions is to turn a func of O(n^2) to a better one. 
+
+4. Drop non dominants 
+O( n + n^2) --> drop n --> O(n^2)
+O(n^2 + 3x + 100 + n/2) --> O(n^2)
+
+######################################################
+######################################################
+
+Checkout
+https://www.bigocheatsheet.com/
+
+#############################
+
+O(n!)
+Adding a loop for every element. 
+
+#############################
+
+Readable 
+Scalable : Speed, Memory
+
+#############################
+
+Space complexity
+
+When a program executes, it has two ways to remember things, heap and stack. 
+Heap - usually where we store variable that we assign
+Stack is where we usually keep our function calls
+
+What causes space complexity?
+variables
+data structures
+function call
+allocations
+
+
+
+
+
+
+
+
+
+
+
+
+
