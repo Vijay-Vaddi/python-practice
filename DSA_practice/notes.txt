@@ -75,7 +75,7 @@ data structures
 function call
 allocations
 
-
+Similar to time. 
 
 
 
