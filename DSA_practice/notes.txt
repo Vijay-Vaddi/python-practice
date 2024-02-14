@@ -77,7 +77,10 @@ allocations
 
 Similar to time. 
 
+Premature optimization can be the root of all evil(saying among developers)
+Maybe time in more important than space, it depends on the circumstances. 
 
+Ultimately it depends on the scale and size of the data thats being operated on. 
 
 
 
