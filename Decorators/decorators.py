@@ -12,12 +12,12 @@ def hello():
     print('Hey there!!')
 
 # when hello is called, hello() func is passed to decorator, fucn is wrapped and retured, and that fucn gets executed
-@my_decorator
-def bye():
-    print("Bye bye Kenobi!!")
+# @my_decorator
+# def bye():
+#     print("Bye bye Kenobi!!")
 
 hello()
-bye()
+# bye()
 
 # # its the same as 
 # a = my_decorator(hello)
