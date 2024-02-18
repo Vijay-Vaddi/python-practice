@@ -198,6 +198,8 @@ Data structure is an arrangement of data in the memory, (RAM when it comes down 
     ***
     some have Different pros and cons on access and writing. 
 
+Some languages have their in built data structures, some have to be built. 
+
 Operations on data structures
     insertion
     deletion
