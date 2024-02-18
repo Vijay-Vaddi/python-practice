@@ -137,12 +137,15 @@ When solving interview exercise.
             check condition
                 and do soemthing else.  
 
-
 9. break code into small sections/pieces
 
+10. start writing code, 
+    dont start white board coding/coding until all is known. 
+    if cant remember syntax/method, just make it up. 
+    logic needs to be good. 
+    start with easy part. 
 
-
-Try to break the code,
+11. Try to break the code,
     check all possible inputs, 
     see how it might break
     what would change and if so what changes to/could be made
