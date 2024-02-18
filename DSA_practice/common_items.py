@@ -1,6 +1,6 @@
 # given 2 arrays, create a function that lets a user know T/F, if 
 # arrays have common items
-array1 = ['a','b','i','x']
+array1 = ['a','b','i','c']
 array2 = ['z','y','c']
 
 # brute force 
@@ -38,6 +38,10 @@ def len_hash_set_common_items(array1, array2):
                 return True           
     return False
 
+# langage specific
+set_items = set(array2)
+if any(item in set_items for item in array1):
+    print(True)
 
-print(hash_set_common_items(array1=array1, array2=array2))
-print(brute_force_common_items(array1=array1, array2=array2))
+# print(hash_set_common_items(array1=array1, array2=array2))
+# print(brute_force_common_items(array1=array1, array2=array2))

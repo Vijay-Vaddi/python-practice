@@ -96,6 +96,81 @@ Knowing fundamentals, understanding things. No memorization.
 4. Communication skills
 Personality match, team match. Type fit. 
 
+=============
+
+When solving interview exercise. 
+
+#dont jump into solving the problem or coding.
+
+1. Write down the key points at the top, 
+    all the key points, ip/op, 
+    edge cases, (if needed) 
+    in a organized manner. 
+
+2. Double check 
+    what are the inputs, and outputs 
+
+3. what is the main goal of the problem. 
+    do we have the time/space to run it?
+    ask if time or space complexity is more important
+
+4. dont ask too many questions.  
+
+5. start with Brute force. 
+    easiest method.
+    No need to code.
+    just speak about it.  
+
+6. speak how Brute force not best solution.   
+    possiblity of O(m*n) can be O(m+n) or better.  
+
+7. walk through approach, comment things 
+    see where you can break things for better
+    any repetition, bottlenecks or unnecessary stuff to rid off.
+    used all the info given?  
+
+8. walk through the code and
+    write down the steps to follow
+    // like loop through one array 
+            do something 
+    // loops through another, 
+            check condition
+                and do soemthing else.  
+
+
+9. break code into small sections/pieces
+
+
+
+Try to break the code,
+    check all possible inputs, 
+    see how it might break
+    what would change and if so what changes to/could be made
+
+    offer possible solutions verbally is possible. 
+
+
+12. dont use i,j (except for loops maybe) for naming variable/functions. 
+    write more readable code. 
+
+check how to improve code, 
+    what we can google,
+    search and work on,
+    maybe something language specific 
+        which can make code more efficient, readable. etc 
+
+# check about space complexity and talk how much it takes. 
+    if space complexity is less/more efficient than time. 
+
+# modularize code and add comments. 
+    talk about how you can split the code into separate functions. 
+    for better readability. 
+
+#demonstrate to interviewr your thought process and 
+    have the thinking capability of an engineer. 
+
+# dont into the idea of solving the problem on time but process of arriving at the solution. 
+
 
 
 
