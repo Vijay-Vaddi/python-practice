@@ -21,6 +21,17 @@ class MyArray():
             self.data[self.len-1] = None
             self.len = self.len-1
 
+    def delete(self, index):
+        if self.len == 0:
+            return 'There doesn\'t seem to be anything here'
+        else: 
+            self.shift_items(index)
+
+    def shift_items(self, index):
+        for i in range(index, self.len-1):
+            self.data[i] = self.data[i+1]
+        self.popItem()
+  
     def _resize(self, new_capacity):
         print('Overflow, resizing array')
         new_data = [None]*new_capacity
@@ -30,11 +41,11 @@ class MyArray():
         self.data = new_data
 
 newlist = MyArray(3)
-newlist.addItem(5)
-newlist.addItem(5)
-newlist.addItem(5)
-newlist.addItem(6)
-newlist.popItem()
+newlist.addItem(1)
+newlist.addItem(2)
+newlist.addItem(3)
+newlist.addItem(4)
+newlist.delete(0)
 
 
 print(newlist.data) 
