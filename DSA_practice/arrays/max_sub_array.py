@@ -11,11 +11,11 @@
 nums = [-2,1,-3,4,-1,2,1,-5,4]
 
 res = nums[0]
-for i in range(len(nums)):
+for i in range(len(nums)-1):
     
     max_sub=nums[i]
     sum = nums[i]
-    for j in range(i+1, len(nums)):
+    for j in range(i+1, len(nums)-1):
         sum = sum+nums[j]
         
         max_sub = max(max_sub, sum)
