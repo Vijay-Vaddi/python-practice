@@ -1,0 +1,36 @@
+hash maps, 
+maps, 
+hashes - Ruby
+hash table, 
+unordered maps
+dictionaries
+objects in js
+
+all are same. 
+
+--------
+
+Key is used as an index of where to find the value in memory.
+key is sent to a hash function, and this hash function produces the address to loop up in memory. 
+hash fucntion decides where(at what address) to put the data in memory. 
+
+-----------
+
+hash fucntion: generates a fixed length output for each/(any?) input.
+md5 -is a sample hash fucntion.
+
+same input same output - its called idempotent 
+
+generally hash function used for hash tables handling, converts the key
+into hashed output which is then converted nto index space/an address. 
+
+sha256 takes long time to generate hashed output. 
+
+-----------
+
+hash collisions. 
+
+insert, lookup, delete and search all O(1)
+Read the following. Best stuff. 
+https://softwareengineering.stackexchange.com/questions/182093/why-store-a-function-inside-a-python-dictionary#:~:text=The%20technique%20is%20when%20you,not%20the%20function%20by%20name.
+
