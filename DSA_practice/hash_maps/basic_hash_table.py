@@ -8,7 +8,8 @@ user = {
     'greeting': greeting
 }
 
+#all O(1)
 user['greeting']()
-
+print(user['age'])
 
 

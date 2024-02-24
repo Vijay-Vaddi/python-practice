@@ -34,3 +34,27 @@ insert, lookup, delete and search all O(1)
 Read the following. Best stuff. 
 https://softwareengineering.stackexchange.com/questions/182093/why-store-a-function-inside-a-python-dictionary#:~:text=The%20technique%20is%20when%20you,not%20the%20function%20by%20name.
 
+#cons of hash table
+
+https://www.cs.usfca.edu/~galles/visualization/OpenHash.html
+
+the hash function can sometimes generate same addresses. 
+storage [memory address][key][value]. when address is same, previously stored item gets in conflict. 
+sometimes linked list is used to overcome this. (other solutions exists)
+
+with limited memory and large input, collision is highly likely. 
+theoretically when this happens, it slows down reading and writing. 
+
+O(n/k) -->O(n) (for read and write as well) k-> size of hash table. 
+
+depending on hash function used, lookup can be O(n)
+
+--------------
+
+Hash table in different languages.
+
+depending on the language, the key and val can be any data type. 
+
+can potentially have functions as keys as well. 
+
+
