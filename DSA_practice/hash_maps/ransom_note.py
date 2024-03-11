@@ -1,6 +1,9 @@
+from collections import defaultdict
+
+
 def canConstruct(ransomNote, magazine) -> bool:
     
-    mag_dict ={}
+    mag_dict = defaultdict()
     for item in magazine:
 
         if item in mag_dict:
