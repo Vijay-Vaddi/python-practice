@@ -1,12 +1,8 @@
-'''290. Word Pattern
-Given a pattern and a string s, find if s follows the same pattern.
-
+'''290. Word Pattern Given a pattern and a string s, find if s follows the same pattern.
 Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
-
 Input: pattern = "abba", s = "dog cat cat dog"
 Output: true
 Example 2:
-
 Input: pattern = "abba", s = "dog cat cat fish"
 Output: false'''
 
@@ -15,20 +11,39 @@ Output: false'''
 
 pattern = "abba" 
 s = "dog cat cat fish"
-ss = set(s.split(' '))
-# general length checks, doesnt account for duplicates occuring consecutively
-if len(set(pattern))!= len(set(s.split(' '))):
+words = s.split(' ')
+# # general length checks, doesnt account for duplicates occuring consecutively
+if (len(set(pattern))!= len(set(words)) or 
+    len(words)!= len(pattern)):
     print(False)
 else:
     print(True)
 
-# using zip_longest function to check for bijection property of two sets
+# # using zip_longest function to check for bijection property of two sets
 from itertools import zip_longest
 if (len(set(pattern)) == 
     len(set(s.split(' '))) ==
-    len(zip_longest(pattern, ss))):
+    len(set(zip_longest(pattern, words)))):
     print(True)
 else:
     print(False)
 
+# without zip_longest function
+# save split words as keys and check againts index of pattern
+    
+def pattern_match(pattern, words):
+    map = dict()
+    for i in range(len(words)):
+        if words[i] not in map:
+            
+            map[words[i]] = pattern[i]
+            print(words[i], ' ', map[words[i]])
+        elif map[words[i]] != pattern[i]:
+            return False
+        # to check if unique words are matching to duplicate pattern letter
+        if len(map.keys())!=len(set(map.values())):
+            return False
+        print(map.items())
+    return True
 
+print(pattern_match(pattern, words))
