@@ -1,3 +1,4 @@
+# 14. Longest Common Prefix
 
 def longestCommonPrefix(strs) -> str:
     res = ''
@@ -19,5 +20,5 @@ def longestCommonPrefix(strs) -> str:
             return res
         res+=first[i]
     return res     
-
-print(longestCommonPrefix())
+strs = ["flower","flow","flight"]
+print(longestCommonPrefix(strs))
