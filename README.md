@@ -1,3 +1,1 @@
 #Practice Python
-
-Before ZTM
