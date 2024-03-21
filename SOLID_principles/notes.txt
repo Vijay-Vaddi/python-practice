@@ -18,3 +18,22 @@ class orders:
     so seperate payment into a different class 
 
     split pay() into two methods pay debit and pay credit 
+
+now both classes and methods have Single functionality.  
+---------
+
+Open / closed
+Write code thats open for extension, to be able to extend existing code with new functionality 
+closed for modification, not to modify existing code in order to extend functionality
+
+adding bitcoin payment methods will change payment class since we have to 
+add a new method, which changes/modifies the existing code. 
+
+so create an  abstract base class (payment handler) and diff classes for diff payment method 
+inheriting from bluprint for abstract base class
+
+-------
+
+
+
+
