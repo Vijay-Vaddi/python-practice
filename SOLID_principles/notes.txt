@@ -1,0 +1,20 @@
+[S]ingle responsibility
+[O]pen / closed
+[L]iskov principle
+[D]dependency inversion
+
+
+Single responsibility:
+classes and methods to have high cohesion, 
+only do one thing. so that one thing can be reused much easer. 
+
+
+class orders:
+    add item() - part of order
+    total_price() - part of order --> makes sense
+    pay() --> part of the end of order but 
+    if more payment methods come, it'll be cumborsome.
+    and Orders class already have way too many responsibility. 
+    so seperate payment into a different class 
+
+    split pay() into two methods pay debit and pay credit 
