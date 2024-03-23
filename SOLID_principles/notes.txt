@@ -59,4 +59,22 @@ violate the intended meaning and logic of the program.
 It's about ensuring that the program behaves in a predictable and consistent manner, 
 even when dealing with different types of objects.
 
+-------
+
+**** Interface segregation ****
+
+Its better to have several specific interfaces than one general purpose interface. 
+in the basic example, using verified attribute to set sms code verification to True/false
+and auth_sms() in ABC to verifiy that and set verified to True. 
+
+adding this to all payment type but credit card doesnt have sms verification system. 
+- also add if verified to check if payment is verified or raise exception. 
+
+The issue is credit card system does not have sms verification 
+
+So general interface like Paymenthander( ) to process payment/2FA verificat for all, does not work. 
+so add diff subclass of Paymenthander() Paymenthander_sms() to handle 2FA
+  
+
+
 

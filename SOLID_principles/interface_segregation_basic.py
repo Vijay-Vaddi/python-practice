@@ -20,18 +20,16 @@ class Orders():
         return total
     
 class PaymentHandler(ABC):
-
-    @abstractmethod
-    def pay(self, order):
-        pass
-
-class PaymentHandler_SMS(PaymentHandler):
     
     @abstractmethod
     def auth_sms(self, code):
         pass
-        
-class DebitPaymentHandler(PaymentHandler_SMS):
+    
+    @abstractmethod
+    def pay(self, order):
+        pass
+    
+class DebitPaymentHandler(PaymentHandler):
     '''verified is True is sms code is verified'''
     def __init__(self, security_code) -> None:
         self.security_code = security_code
@@ -53,12 +51,16 @@ class CreditPaymentHandler(PaymentHandler):
         self.security_code = security_code
         self.verified = False
 
+    def auth_sms(self, code):
+        print(f"verifiying sms code {code}")
+        raise Exception("Credit card does not support SMS 2FA")
+
     def pay(self, order):
         print('processing credit type')
         print(f"verifying security code: {self.security_code}") 
         order.status = "paid"
 
-class BitcoinPaymentHandler(PaymentHandler_SMS):
+class BitcoinPaymentHandler(PaymentHandler):
 
     def __init__(self, security_code) -> None:
         self.security_code = security_code
@@ -66,8 +68,6 @@ class BitcoinPaymentHandler(PaymentHandler_SMS):
 
     def auth_sms(self, code):
         print(f"verifiying sms code {code}")
-        self.verified = True
-
 
     def pay(self, order):
         if not self.verified:
@@ -76,7 +76,7 @@ class BitcoinPaymentHandler(PaymentHandler_SMS):
         print(f"verifying security code: {self.security_code}") 
         order.status = "paid"
 
-class PaypalPaymentHandler(PaymentHandler_SMS):
+class PaypalPaymentHandler(PaymentHandler):
 
     def __init__(self, email) -> None:
         self.email = email
@@ -84,7 +84,6 @@ class PaypalPaymentHandler(PaymentHandler_SMS):
 
     def auth_sms(self, code):
         print(f"verifiying sms code {code}")
-        self.verified = True
 
     def pay(self, order):
         if not self.verified:
