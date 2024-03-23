@@ -74,7 +74,12 @@ The issue is credit card system does not have sms verification
 
 So general interface like Paymenthander( ) to process payment/2FA verificat for all, does not work. 
 so add diff subclass of Paymenthander() Paymenthander_sms() to handle 2FA
-  
+
+so this split creates better interfaces. 
+
+-- instead of using classes and subclasses, can do using Composition
+
+
 
 
 
