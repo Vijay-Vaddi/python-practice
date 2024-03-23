@@ -1,0 +1,2 @@
+Understand Liskov substitution clearly. 
+
