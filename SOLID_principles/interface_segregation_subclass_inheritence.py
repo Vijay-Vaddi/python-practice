@@ -51,7 +51,6 @@ class CreditPaymentHandler(PaymentHandler):
 
     def __init__(self, security_code) -> None:
         self.security_code = security_code
-        self.verified = False
 
     def pay(self, order):
         print('processing credit type')
@@ -67,7 +66,6 @@ class BitcoinPaymentHandler(PaymentHandler_SMS):
     def auth_sms(self, code):
         print(f"verifiying sms code {code}")
         self.verified = True
-
 
     def pay(self, order):
         if not self.verified:
@@ -101,7 +99,7 @@ order.add_items('water', 1, 10)
 
 print(order.total_price())
 pay = PaypalPaymentHandler("hello@123")
+pay.auth_sms('123')
 pay.pay(order)
-
 print(order.status)
 
