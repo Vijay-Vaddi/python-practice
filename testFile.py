@@ -1,5 +1,2 @@
-# import sys
-# print(sys.prefix) 
-# print(sys.base_prefix)
+print('Hello world')
 
-print('Ho '*3, 'Merry Christmas!')
